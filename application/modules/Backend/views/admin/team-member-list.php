@@ -58,9 +58,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">Serial No.</th>
-                                <th scope="col">Client Name</th>
-                                <th scope="col">Client Profession</th>
-                                <th scope="col">Client Review</th>                              
+                                <th scope="col">Member Name</th>
+                                <th scope="col">Member Position</th>
+                                <th scope="col">Member image</th>                              
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -74,18 +74,18 @@
                             ?>
                             <tr>
                                 <td><?php echo  $counter ?></td>
-                                <td><?php echo  $row->client_name ?></td>
+                                <td><?php echo  $row->member_name ?></td>
                             
-                                <td><?php echo  $row->client_review ?></td>                                
-                                <td><?php echo  $row->client_city ?></td>
+                                <td><?php echo  $row->member_position ?></td>                                
+                                <td><img src ="<?php echo base_url('assets/img/team/team_member_'.$row->id.".jpg") ?>" style="width:80px"></td>
                                 <td style="display: flex; font-size:20px">
                                     <a class="ml-3" style="color:red"
-                                        onclick="return confirm('Are you sure you want delete testimonial of <?php echo $row->client_name ?>')"
-                                        href="delete-testimonial/<?php echo  $row->id ?>" data-toggle="tooltip"
+                                        onclick="return confirm('Are you sure you want delete member of <?php echo $row->member_name ?>')"
+                                        href="delete-team-member/<?php echo  $row->id ?>" data-toggle="tooltip"
                                         data-placement="top" title="Delete"> <i class="fa fa-trash"
                                             aria-hidden="true"></i></a>
                                     <!-- <a class="ml-3" href="view-testimonialphp echo  $row->id ?>" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye" aria-hidden="true"></i></a> -->
-                                    <a class="ml-3 text-success" href="tesimonial-form/<?php echo  $row->id ?>"
+                                    <a class="ml-3 text-success" href="team-member-form/<?php echo  $row->id ?>"
                                         data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa  fa-edit"
                                             aria-hidden="true"></i></a>
                                 </td>

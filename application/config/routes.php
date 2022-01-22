@@ -60,11 +60,11 @@ $route['translate_uri_dashes'] = FALSE;
 //------------------------------------------------------------------------------------------ 
 
 
-// exams
 $route['contact-us'] = 'Frontent/FrontentController/contact_us';
 $route['about-us'] = 'Frontent/FrontentController/about_us';
 $route['faq'] = 'Frontent/FrontentController/faq';
 $route['add-query'] = 'Frontent/FrontentController/add_query';
+$route['services/(:any)'] = 'Frontent/FrontentController/services/$1';
 
 
 
@@ -100,6 +100,7 @@ $route['view-query/(:num)'] ='Backend/admin/QueryController/view_query/$1';
 $route['testimonial-list'] ='Backend/admin/TestimonialController/testimonial_list';
 $route['tesimonial-form'] = 'Backend/admin/TestimonialController/addTestimonial';
 $route['tesimonial-form/(:num)'] = 'Backend/admin/TestimonialController/addTestimonial/$1';
+$route['delete-testimonial/(:num)'] = 'Backend/admin/TestimonialController/delete_tesimonial/$1';
 
 //slider
 $route['slider-image-list'] ='Backend/admin/SliderController/slider_image_list';
@@ -110,3 +111,20 @@ $route['slider-image-form/(:num)'] = 'Backend/admin/SliderController/addSliderIm
 $route['gallery-image-list'] ='Backend/admin/GalleryController/gallery_image_list';
 $route['gallery-image-form'] = 'Backend/admin/GalleryController/addGalleryImage';
 $route['gallery-image-form/(:num)'] = 'Backend/admin/GalleryController/addGalleryImage/$1';
+
+//Team Members
+$route['team-member-list'] ='Backend/admin/TeamController/team_member_list';
+$route['team-member-form'] = 'Backend/admin/TeamController/addTeamMember';
+$route['team-member-form/(:num)'] = 'Backend/admin/TeamController/addTeamMember/$1';
+$route['delete-team-member/(:num)'] = 'Backend/admin/TeamController/delete_team_member/$1';
+
+$route['statistics'] ='Backend/admin/TeamController/statistics';
+
+//projects
+
+$route['Projects'] ='Backend/admin/ProjectsController/Project_list';
+$route['add-project'] = 'Backend/admin/ProjectsController/addProject';
+$route['add-project/(:num)'] = 'Backend/admin/ProjectsController/addProject/$1';
+$route['delete-project/(:num)'] = 'Backend/admin/ProjectsController/delete_project/$1';
+
+

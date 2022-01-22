@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Naukariwala</title>
+  <title>Suntract_power</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-free/css/all.min.css') ?>">
@@ -83,7 +83,7 @@
       <!-- Brand Logo -->
       <a href="#" class="brand-link">
         <img src="<?php echo base_url('assets/dist/img/AdminLTELogo.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">SolarPanel</span>
+        <span class="brand-text font-weight-light">SuntractPower</span>
       </a>
 
       <!-- Sidebar -->
@@ -155,6 +155,24 @@
                   <a href="<?php echo base_url('Notification-list') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Notifications</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url('team-member-list') ?>" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Team</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url('statistics') ?>" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>statistics</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo base_url('Projects') ?>" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Projects</p>
                   </a>
                 </li>
               </ul>

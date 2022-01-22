@@ -239,36 +239,31 @@
                                                 <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-608"><a href="<?php echo base_url('about-us'); ?>">ABOUT US</a>
                                                     <ul class="sub-menu">
                                                         <li id="menu-item-609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609"><a href="<?php echo base_url('about-us'); ?>">ABOUT US</a></li>
-                                                        <li id="menu-item-610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-610"><a href="<?php echo base_url('faq'); ?>">FAQ&#8217;s</a></li>
+                                                        <li id="menu-item-610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-610"><a href="<?php echo base_url('about-us'); ?>">OUR TEAM</a></li>
+                                                        
                                                         <!-- <li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="dedicated-projects/index.html">Dedicated Projects</a></li> -->
                                                     </ul>
                                                 </li>
                                                 <li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-585"><a href="our-services/index.html">Services</a>
                                                     <ul class="sub-menu">
-                                                        <li id="menu-item-613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-613"><a href="">Our Services</a></li>
-                                                        <li id="menu-item-649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-649"><a href="">Commercial Services</a></li>
-                                                        <li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650"><a href="">Panels Installation</a></li>
-                                                        <li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651"><a href="">Replacement Upgrade</a></li>
-                                                        <li id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-652"><a href="">Residential EV Charges</a></li>
-                                                        <li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="">Solar Maintenance</a></li>
+                                                        <li id="menu-item-613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-613"><a href="<?php echo base_url() .'services/s1' ;?>">Project development </a></li>
+                                                        <li id="menu-item-649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-649"><a href="<?php echo base_url() .'services/s2' ;?>">EPC (Engineering Procurement & Construction)</a></li>
+                                                        <li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650"><a href="<?php echo base_url() .'services/s3' ;?>">Project Management, Engineering & Design Consultancy</a></li>
+                                                        <li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651"><a href="<?php echo base_url() .'services/s4' ;?>">Operation and Maintenance</a></li>
+                                                        <!-- <li id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-652"><a href="">Residential EV Charges</a></li>
+                                                        <li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="">Solar Maintenance</a></li> -->
                                                     </ul>
                                                 </li>
-                                                <li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579"><a href="">Projects</a></li>
-                                                <li id="menu-item-578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-578"><a href="">News</a>
-                                                    <ul class="sub-menu">
-                                                        <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="">Blog Grid Style</a></li>
-                                                        <li id="menu-item-612" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-612"><a href="">Blog with Sidebar</a></li>
-                                                        <li id="menu-item-654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-654"><a href="">Blog Post Details</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579"><a href="<?php echo base_url('gallery') ?>">Gallery</a></li>
+                                                <li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579"><a href="<?php echo base_url('news') ?> ">News</a></li>                                                
                                                 <li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="<?php echo base_url('contact-us') ?>">CONTACT</a></li>
                                             </ul>
                                         </div>
                                     </nav>
                                 </div>
-                                <div class="search-btn">
+                                <!-- <div class="search-btn">
                                     <button type="button" class="theme-btn search-toggler"><span class="fa fa-search"></span></button>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

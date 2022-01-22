@@ -25,7 +25,7 @@ class TestimonialController extends My_Controller
         $dataArray = array();
         $this->form_validation->set_rules('client_name', 'Client name ', 'required');
         $this->form_validation->set_rules('client_review', 'Client review ', 'required');
-        $this->form_validation->set_rules('client_profession', 'Client profession', 'required');        
+        $this->form_validation->set_rules('client_city', 'Client profession', 'required');        
     
         if ($this->form_validation->run() == false) {
             $dataArray['form_caption'] = "Add Testimonial";
@@ -37,7 +37,7 @@ class TestimonialController extends My_Controller
                 $dataArray['form_caption'] = 'Edit Testimonial';
                 $dataArray['id'] = $row->id;
                 $dataArray['client_name'] = $row->client_name;
-                $dataArray['client_profession'] = $row->client_profession;
+                $dataArray['client_city'] = $row->client_city;
                 $dataArray['client_review'] = $row->client_review;               
             }
 
@@ -49,7 +49,7 @@ class TestimonialController extends My_Controller
             $id = trim($this->input->post('id'));
             $dataValues = array(                
                 "client_name" => trim($this->input->post('client_name')),
-                "client_profession" => trim($this->input->post('client_profession')),
+                "client_city" => trim($this->input->post('client_city')),
                 "client_review" => trim($this->input->post('client_review')),                             
             );
 
@@ -95,5 +95,13 @@ class TestimonialController extends My_Controller
             $this->session->set_flashdata('operation_msg_type', 'success');
             redirect('testimonial-list');
         }
+    }
+
+    public function delete_tesimonial($testimonial_id)
+    {
+        $this->Testimonials->delete_testimonial_by_id($testimonial_id);
+        $this->session->set_flashdata('operation_msg', 'Testimonial successfully Deleted.');
+        $this->session->set_flashdata('operation_msg_type', 'success');
+        redirect('testimonial-list');
     }
 }

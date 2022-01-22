@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Naukariwala</title>
+    <title>Suntract Power</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,24 +20,24 @@
     <script>
         var base_url = '<?php echo base_url(); ?>';
 
-        $(document).ready(function() {
-            make_nav_link_active();
+        // $(document).ready(function() {
+        //     make_nav_link_active();
 
-            $('.header_navbar_ul > .nav-item > .nav-link').click(function(e) {
-                $.ajax({
-                    url: base_url + 'store-active-nav-link-id',
-                    type: 'POST',
-                    data: {
-                        'selected_id': this.id
-                    },
-                });
-            });
-        });
+        //     $('.header_navbar_ul > .nav-item > .nav-link').click(function(e) {
+        //         $.ajax({
+        //             url: base_url + 'store-active-nav-link-id',
+        //             type: 'POST',
+        //             data: {
+        //                 'selected_id': this.id
+        //             },
+        //         });
+        //     });
+        // });
 
-        function make_nav_link_active() {
-            $('.header_navbar_ul > .nav-item > .nav-link').removeClass('active');
-            $('#<?php echo empty($_SESSION['selected_id']) ? "main" : $_SESSION['selected_id'] ?>').addClass("active");
-        }
+        // function make_nav_link_active() {
+        //     $('.header_navbar_ul > .nav-item > .nav-link').removeClass('active');
+        //     $('#<?php echo empty($_SESSION['selected_id']) ? "main" : $_SESSION['selected_id'] ?>').addClass("active");
+        // }
     </script>
 </head>
 

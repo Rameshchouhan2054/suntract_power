@@ -27,7 +27,7 @@ if (!empty($id)) {
     <div class="modal fade" id="client_image_preview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <img id="myImg" src="<?php echo base_url('assets/img/client-image/client_image_') . $id . '.jpg' ?>" alt="Icon">
+                <img id="myImg" src="<?php echo base_url('assets/img/team/team_member_') . $id . '.jpg' ?>" alt="Icon">
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@ if (!empty($id)) {
                         <div class="card card-outline-secondary">
                             <div class="card-header d-flex">
                                 <h3 class="mb-0"><?php echo empty($form_caption) ? "" : $form_caption; ?> </h3>
-                                <a class="btn btn-secondary mr-3" href="<?php echo base_url('backend-user-list') ?>" style="position:absolute;right:0">Back </a>
+                                <a class="btn btn-secondary mr-3" href="<?php echo base_url('team-member-list') ?>" style="position:absolute;right:0">Back </a>
                             </div>
                             <div class="card-body">
                                 <?php
@@ -80,53 +80,40 @@ if (!empty($id)) {
                                 ?>
                                 <input type="hidden" name="id" id="id" value="<?php echo empty($id) ? NULL : $id; ?>">
                                 <div class="form-group ">
-                                    <label for="client_name">Client Name<font color="red">*</font></label>
+                                    <label for="member_name">Member Name<font color="red">*</font></label>
                                     <?php
                                     $data = array(
-                                        'name' => 'client_name',
-                                        'id' => 'client_name',
-                                        'value' => set_value('client_name', empty($client_name) ? NULL : $client_name),
+                                        'name' => 'member_name',
+                                        'id' => 'member_name',
+                                        'value' => set_value('member_name', empty($member_name) ? NULL : $member_name),
                                         'class' => 'form-control',
-                                        'placeholder' => 'Enter client name',
+                                        'placeholder' => 'Enter member name',
                                         'autofocus' => 'autofocus'
                                     );
                                     echo form_input($data);
                                     ?>
                                 </div>                            
                                 <div class="form-group ">
-                                    <label for="client_review">Client_review</label>
+                                    <label for="member_position">Member Position</label>
                                     <?php
                                     $data = array(
-                                        'name' => 'client_review',
-                                        'id' => 'client_review',
-                                        'value' => set_value('client_review', empty($client_review) ? NULL : $client_review),
+                                        'name' => 'member_position',
+                                        'id' => 'member_position',
+                                        'value' => set_value('member_position', empty($member_position) ? NULL : $member_position),
                                         'class' => 'form-control',
-                                        'placeholder' => 'Enter what client says',
-                                        'rows' => '4'
-                                    );
-                                    echo form_textarea($data);
-                                    ?>
-                                </div>
-                                <div class="form-group">
-                                    <label for="client_city">City/State</label>
-                                    <?php
-                                    $data = array(
-                                        'name' => 'client_city',
-                                        'id' => 'client_city',
-                                        'value' => set_value('client_city', empty($client_city) ? NULL : $client_city),
-                                        'class' => 'form-control',
-                                        'placeholder' => 'Enter client City',
+                                        'placeholder' => 'Enter the member position in your company',
+                                        
                                     );
                                     echo form_input($data);
                                     ?>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="client_image">Client Image<font color="red">*</font></label>
+                                    <label for="member_image">Member Image<font color="red">*</font></label>
                                     <div class="custom-file">
                                         <?php
                                         $data = array(
                                             'type' => 'file',
-                                            'name' => 'client_image',
+                                            'name' => 'member_image',
                                             'id' => 'customFile',
                                             'class' => 'form-control custom-file-input',
                                         );
@@ -143,7 +130,7 @@ if (!empty($id)) {
                                     <div class="row">
                                         <div class="form-group col-md-12 border p-3">
                                             <label class="col-md-5 ">Uploaded Image:</label>
-                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/client-image/client_image_' . $id . '.jpg') ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
+                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/team/team_member_' . $id . '.jpg') ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
                                         </div>
                                     </div>
                                 <?php
@@ -169,14 +156,11 @@ if (!empty($id)) {
         var message;
         $("#testimonial-form").validate({
             rules: {
-                client_name: {
+                member_name: {
                     "required": true,
                 },
-                client_profession: {
+                member_position: {
                     "required": true
-                },
-                client_review: {
-                    "required": true,
                 },
                 client_image: {
                     "required": function() {
@@ -187,17 +171,15 @@ if (!empty($id)) {
                 },
             },
             messages: {
-                client_name: {
-                    "required": "Client name is required",
+                member_name: {
+                    "required": "Please enter name of member",
                 },
-                client_profession: {
-                    "required": "Profession is required"
+                member_position: {
+                    "required": "Please enter postion of member"
                 },
-                client_review: {
-                    "required": "Client review is requied",
-                },
+                
                 client_image: {
-                    "required": "Please select client image"
+                    "required": "Please select member image"
                 },
             },
         });

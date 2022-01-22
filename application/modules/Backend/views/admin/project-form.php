@@ -27,7 +27,7 @@ if (!empty($id)) {
     <div class="modal fade" id="client_image_preview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <img id="myImg" src="<?php echo base_url('assets/img/client-image/client_image_') . $id . '.jpg' ?>" alt="Icon">
+                <img id="myImg" src="<?php echo base_url('assets/img/project-image/project_image_') . $id . '.jpg' ?>" alt="Icon">
             </div>
         </div>
     </div>
@@ -71,62 +71,49 @@ if (!empty($id)) {
                         <div class="card card-outline-secondary">
                             <div class="card-header d-flex">
                                 <h3 class="mb-0"><?php echo empty($form_caption) ? "" : $form_caption; ?> </h3>
-                                <a class="btn btn-secondary mr-3" href="<?php echo base_url('backend-user-list') ?>" style="position:absolute;right:0">Back </a>
+                                <a class="btn btn-secondary mr-3" href="<?php echo base_url(empty($back_btn) ? "" : $back_btn) ?>" style="position:absolute;right:0">Back </a>
                             </div>
                             <div class="card-body">
                                 <?php
-                                $attributes = array('id' => 'testimonial-form', 'class' => 'form-horizontal');
+                                $attributes = array('id' => 'project-form', 'class' => 'form-horizontal');
                                 echo form_open_multipart($form_action, $attributes);
                                 ?>
                                 <input type="hidden" name="id" id="id" value="<?php echo empty($id) ? NULL : $id; ?>">
                                 <div class="form-group ">
-                                    <label for="client_name">Client Name<font color="red">*</font></label>
+                                    <label for="project_name">Project Name<font color="red">*</font></label>
                                     <?php
                                     $data = array(
-                                        'name' => 'client_name',
-                                        'id' => 'client_name',
-                                        'value' => set_value('client_name', empty($client_name) ? NULL : $client_name),
+                                        'name' => 'project_name',
+                                        'id' => 'project_name',
+                                        'value' => set_value('project_name', empty($project_name) ? NULL : $project_name),
                                         'class' => 'form-control',
-                                        'placeholder' => 'Enter client name',
+                                        'placeholder' => 'Enter project name',
                                         'autofocus' => 'autofocus'
                                     );
                                     echo form_input($data);
                                     ?>
                                 </div>                            
                                 <div class="form-group ">
-                                    <label for="client_review">Client_review</label>
+                                    <label for="description">Project description</label>
                                     <?php
                                     $data = array(
-                                        'name' => 'client_review',
-                                        'id' => 'client_review',
-                                        'value' => set_value('client_review', empty($client_review) ? NULL : $client_review),
+                                        'name' => 'description',
+                                        'id' => 'description',
+                                        'value' => set_value('description', empty($description) ? NULL : $description),
                                         'class' => 'form-control',
-                                        'placeholder' => 'Enter what client says',
-                                        'rows' => '4'
+                                        'placeholder' => 'Enter description',
+                                        'rows'=>2
                                     );
                                     echo form_textarea($data);
                                     ?>
                                 </div>
-                                <div class="form-group">
-                                    <label for="client_city">City/State</label>
-                                    <?php
-                                    $data = array(
-                                        'name' => 'client_city',
-                                        'id' => 'client_city',
-                                        'value' => set_value('client_city', empty($client_city) ? NULL : $client_city),
-                                        'class' => 'form-control',
-                                        'placeholder' => 'Enter client City',
-                                    );
-                                    echo form_input($data);
-                                    ?>
-                                </div>
                                 <div class="form-group ">
-                                    <label for="client_image">Client Image<font color="red">*</font></label>
+                                    <label for="member_image">Upload Image<font color="red">*</font></label>
                                     <div class="custom-file">
                                         <?php
                                         $data = array(
                                             'type' => 'file',
-                                            'name' => 'client_image',
+                                            'name' => 'project_image',
                                             'id' => 'customFile',
                                             'class' => 'form-control custom-file-input',
                                         );
@@ -143,7 +130,7 @@ if (!empty($id)) {
                                     <div class="row">
                                         <div class="form-group col-md-12 border p-3">
                                             <label class="col-md-5 ">Uploaded Image:</label>
-                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/client-image/client_image_' . $id . '.jpg') ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
+                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/project-image/project_image_' . $id . '.jpg') ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
                                         </div>
                                     </div>
                                 <?php
@@ -167,18 +154,15 @@ if (!empty($id)) {
 <script>
     $("document").ready(function() {
         var message;
-        $("#testimonial-form").validate({
+        $("#project-form").validate({
             rules: {
-                client_name: {
+                project_name: {
                     "required": true,
                 },
-                client_profession: {
+                description: {
                     "required": true
                 },
-                client_review: {
-                    "required": true,
-                },
-                client_image: {
+                project_image: {
                     "required": function() {
                         if ($('#id').val() == "") {
                             return true;
@@ -187,17 +171,15 @@ if (!empty($id)) {
                 },
             },
             messages: {
-                client_name: {
-                    "required": "Client name is required",
+                project_name: {
+                    "required": "Please enter name of member",
                 },
-                client_profession: {
-                    "required": "Profession is required"
+                description: {
+                    "required": "Please enter description"
                 },
-                client_review: {
-                    "required": "Client review is requied",
-                },
-                client_image: {
-                    "required": "Please select client image"
+                
+                project_image: {
+                    "required": "Please select Project image"
                 },
             },
         });

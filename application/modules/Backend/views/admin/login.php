@@ -3,11 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <!-- Custom fonts for this template -->
-    <link rel="stylesheet" href="assets/css/simple-line-icons.css" />
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="assets/css/loginstyle.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/loginstyle.css">
     <link rel="shortcut icon" href="#">
 </head>
 <section class="showcase">
@@ -55,7 +53,7 @@
     </div>
 </section>
 <script src="<?php  echo base_url('assets/vendor/jquery/jquery.min.js'); ?>"></script>
-<script src="<?php echo base_url() ?>/assets/dist/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?php echo base_url() ?>assets/dist/jquery-validation/jquery.validate.min.js"></script>
 <script>
     $("document").ready(function() {
         $("#register").validate({

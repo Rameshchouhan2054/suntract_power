@@ -12185,7 +12185,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
  
  .about-section-four{
 	 position:relative;
-	 padding: 110px 0px 60px;
+	 padding: 110px 0px 0px;
 	 overflow: hidden;
  }
  

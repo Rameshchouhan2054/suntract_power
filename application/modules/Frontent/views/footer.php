@@ -1,5 +1,5 @@
 <div data-elementor-type="page" data-elementor-id="351" class="elementor elementor-351" data-elementor-settings="[]">
-            <div class="elementor-inner">
+            <!-- <div class="elementor-inner">
                 <div class="elementor-section-wrap">
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-9d701f3 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9d701f3" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
@@ -67,7 +67,7 @@
                     </section>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div data-elementor-type="page" data-elementor-id="360" class="elementor elementor-360" data-elementor-settings="[]">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
@@ -285,17 +285,17 @@
     <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script type='text/javascript' src='<?php echo base_url(); ?>assets/js/dist/vendor/regenerator-runtime.minb36a.js?ver=0.13.7' id='regenerator-runtime-js'></script>
     <script type='text/javascript' src='<?php echo base_url(); ?>assets/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>
-    <script type='text/javascript' id='contact-form-7-js-extra'>
+    <!-- <script type='text/javascript' id='contact-form-7-js-extra'>
         /* <![CDATA[ */
         var wpcf7 = {
             "api": {
-                "root": "https:\/\/smartdemowp.com\/strnix\/wp-json\/",
-                "namespace": "contact-form-7\/v1"
+                "root": "<?php echo base_url() ; ?>",
+                // "namespace": "contact-form-7\/v1"
             }
         };
         /* ]]> */
-    </script>
-    <script type='text/javascript' src='<?php echo base_url(); ?>assets/plugins/contact-form-7/includes/js/index5697.js?ver=5.5.3' id='contact-form-7-js'></script>
+    </script> -->
+    <!-- <script type='text/javascript' src='<?php echo base_url(); ?>assets/plugins/contact-form-7/includes/js/index5697.js?ver=5.5.3' id='contact-form-7-js'></script> -->
     <script type='text/javascript' src='<?php echo base_url(); ?>assets/themes/strnix/assets/js/popper.min080f.js?ver=5.8.2' id='popper-js'></script>
     <script type='text/javascript' src='<?php echo base_url(); ?>assets/themes/strnix/assets/js/bootstrap.min080f.js?ver=5.8.2' id='bootstrap-js'></script>
     <script type='text/javascript' src='<?php echo base_url(); ?>assets/themes/strnix/assets/js/jquery-ui080f.js?ver=5.8.2' id='jquery-ui-js'></script>
