@@ -27,7 +27,7 @@ if (!empty($id)) {
     <div class="modal fade" id="client_image_preview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <img id="myImg" src="<?php echo base_url('assets/img/gallery/'.$image_address ) ?>" alt="Icon">
+                <img id="myImg" src="<?php echo base_url('assets/img/news/'.$image_address) ?>" alt="Icon">
             </div>
         </div>
     </div>
@@ -80,26 +80,26 @@ if (!empty($id)) {
                                 ?>
                                 <input type="hidden" name="id" id="id" value="<?php echo empty($id) ? NULL : $id; ?>">
                                 <div class="form-group ">
-                                    <label for="photo_category">Photo Category<font color="red">*</font></label>
+                                    <label for="news_title">News Title<font color="red">*</font></label>
                                     <?php
                                     $data = array(
-                                        'name' => 'photo_category',
-                                        'id' => 'photo_category',
-                                        'value' => set_value('photo_category', empty($photo_category) ? NULL : $photo_category),
+                                        'name' => 'news_title',
+                                        'id' => 'news_title',
+                                        'value' => set_value('news_title', empty($news_title) ? NULL : $news_title),
                                         'class' => 'form-control',
-                                        'placeholder' => 'Enter Photo category like Construction',
+                                        'placeholder' => 'Enter Title of news',
                                         'autofocus' => 'autofocus'
                                     );
                                     echo form_input($data);
                                     ?>
                                 </div>                            
                                 <div class="form-group ">
-                                    <label for="photo_desc">Photo description</label>
+                                    <label for="news_desc">News description</label>
                                     <?php
                                     $data = array(
-                                        'name' => 'photo_desc',
-                                        'id' => 'photo_desc',
-                                        'value' => set_value('photo_desc', empty($photo_desc) ? NULL : $photo_desc),
+                                        'name' => 'news_desc',
+                                        'id' => 'news_desc',
+                                        'value' => set_value('news_desc', empty($news_desc) ? NULL : $news_desc),
                                         'class' => 'form-control',
                                         'placeholder' => 'Enter description',
                                         'rows'=>2
@@ -108,12 +108,12 @@ if (!empty($id)) {
                                     ?>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="member_image">Upload Image<font color="red">*</font></label>
+                                    <label for="news_image">Upload Image<font color="red">*</font></label>
                                     <div class="custom-file">
                                         <?php
                                         $data = array(
                                             'type' => 'file',
-                                            'name' => 'gallery_image',
+                                            'name' => 'news_image',
                                             'id' => 'customFile',
                                             'class' => 'form-control custom-file-input',
                                         );
@@ -130,7 +130,7 @@ if (!empty($id)) {
                                     <div class="row">
                                         <div class="form-group col-md-12 border p-3">
                                             <label class="col-md-5 ">Uploaded Image:</label>
-                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/gallery/'.$image_address) ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
+                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/news/'.$image_address) ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
                                         </div>
                                     </div>
                                 <?php

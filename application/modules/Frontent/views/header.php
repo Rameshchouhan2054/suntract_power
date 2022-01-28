@@ -80,6 +80,7 @@
             background-image: url("<?php echo base_url(); ?>assets/uploads/2020/06/banner-bg-1.jpg");
         }
     </style>
+    <link href="<?php echo base_url('assets/img/logo/logo.png'); ?>" rel="icon">
     <link rel='stylesheet' id='strnix-google-fonts-css' href='https://fonts.googleapis.com/css?family=Hind:300,400,400i,600,600i,700,700i,800,800i%7CMerriweather:300,400,400i,600,600i,700,700i,800,800i&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese' type='text/css' media='all' />
     <link rel='stylesheet' id='wp-block-library-css' href='<?php echo base_url(); ?>assets/css/dist/block-library/style.min080f.css?ver=5.8.2' type='text/css' media='all' />
     <link rel='stylesheet' id='extendify-sdk-utility-classes-css' href='<?php echo base_url(); ?>assets/plugins/redux-framework/redux-core/extendify-sdk/public/build/extendify-utilitiesef31.css?ver=13.4' type='text/css' media='all' />
@@ -166,7 +167,7 @@
                 <div class="auto-container">
                     <div class="inner clearfix">
                         <div class="top-left clearfix">
-                            <div class="top-text">The Nagy saving for us </div>
+                            <div class="top-text">Innovating Today For The Green Future </div>
                         </div>
                         <div class="top-right clearfix">
                             <div class="email">
@@ -244,7 +245,7 @@
                                                         <!-- <li id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611"><a href="dedicated-projects/index.html">Dedicated Projects</a></li> -->
                                                     </ul>
                                                 </li>
-                                                <li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-585"><a href="our-services/index.html">Services</a>
+                                                <li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-585"><a href="<?php echo base_url('services') ?>">Services</a>
                                                     <ul class="sub-menu">
                                                         <li id="menu-item-613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-613"><a href="<?php echo base_url() .'services/s1' ;?>">Project development </a></li>
                                                         <li id="menu-item-649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-649"><a href="<?php echo base_url() .'services/s2' ;?>">EPC (Engineering Procurement & Construction)</a></li>

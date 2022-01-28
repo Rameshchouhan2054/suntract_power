@@ -37,7 +37,8 @@ class TeamController extends My_Controller
                 $dataArray['form_caption'] = 'Edit Member';
                 $dataArray['id'] = $row->id;
                 $dataArray['member_name'] = $row->member_name;                
-                $dataArray['member_position'] = $row->member_position;               
+                $dataArray['member_position'] = $row->member_position;    
+                $dataArray['image_address'] = $row->image_address;               
             }
 
       
@@ -83,6 +84,9 @@ class TeamController extends My_Controller
                 $this->session->set_flashdata('operation_msg_type', 'danger');
                 redirect('team-member-form');
                 }
+
+                $uploaded_filename = $this->upload->data('file_name');
+                $this->Team->update_filename($response->id,$uploaded_filename);
             }
          
             if ($response->message == "inserted") {

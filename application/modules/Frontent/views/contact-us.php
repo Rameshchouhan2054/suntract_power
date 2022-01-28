@@ -65,7 +65,7 @@
                                                                             <div class="icon"><img src="<?php echo base_url() ?>assets/uploads/2020/06/icon-mail-1.png" alt=""></div>
                                                                             <strong>Send Email</strong>
                                                                             <ul class="info">
-                                                                                <li><a href=""><span class="__cf_email__" data-cfemail="cea7a0a8a18eaaa1a3afa7a0e0ada1a3">info@suntrackpower.com</span></a></li>
+                                                                                <li><a href="mailto:info@suntrackpower.com"><span class="__cf_email__" data-cfemail="cea7a0a8a18eaaa1a3afa7a0e0ada1a3">info@suntrackpower.com</span></a></li>
                                                                                 <!-- <li><a href="https://smartdemowp.com/cdn-cgi/l/email-protection#75260005051a0701350601071b1c0d5b161a18"><span class="__cf_email__" data-cfemail="98cbede8e8f7eaecd8ebeceaf6f1e0b6fbf7f5">[email&#160;protected]</span></a></li> -->
                                                                             </ul>
                                                                         </div>

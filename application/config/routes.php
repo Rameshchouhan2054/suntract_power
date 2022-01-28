@@ -65,6 +65,9 @@ $route['about-us'] = 'Frontent/FrontentController/about_us';
 $route['faq'] = 'Frontent/FrontentController/faq';
 $route['add-query'] = 'Frontent/FrontentController/add_query';
 $route['services/(:any)'] = 'Frontent/FrontentController/services/$1';
+$route['services'] = 'Frontent/FrontentController/services';
+$route['gallery'] = 'Frontent/FrontentController/gallery';
+$route['news'] = 'Frontent/FrontentController/news';
 
 
 
@@ -111,6 +114,15 @@ $route['slider-image-form/(:num)'] = 'Backend/admin/SliderController/addSliderIm
 $route['gallery-image-list'] ='Backend/admin/GalleryController/gallery_image_list';
 $route['gallery-image-form'] = 'Backend/admin/GalleryController/addGalleryImage';
 $route['gallery-image-form/(:num)'] = 'Backend/admin/GalleryController/addGalleryImage/$1';
+$route['delete-gallery-image/(:num)'] = 'Backend/admin/GalleryController/delete_image/$1';
+
+//News
+$route['news-list'] ='Backend/admin/NewsController/news_list';
+$route['news-form'] = 'Backend/admin/NewsController/addNews';
+$route['news-form/(:num)'] = 'Backend/admin/NewsController/addNews/$1';
+$route['delete-news/(:num)'] = 'Backend/admin/NewsController/delete_news/$1';
+
+
 
 //Team Members
 $route['team-member-list'] ='Backend/admin/TeamController/team_member_list';

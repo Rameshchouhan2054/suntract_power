@@ -1,9 +1,9 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2021-2031 <a href="#">Naukriwala</a>.</strong>
+    <strong>Copyright &copy; 2021-2031 <a href="#">Suntract Power</a>.</strong>
     All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
+    <!-- <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.1.0
-    </div>
+    </div> -->
   </footer>
 
   <!-- Control Sidebar -->

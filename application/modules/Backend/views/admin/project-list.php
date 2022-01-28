@@ -82,7 +82,7 @@
                                     <td><?php echo  $counter ?></td>
                                     <td><?php echo  $row->project_name ?></td>
                                     <td><?php echo  $row->description ?></td>
-                                    <td>  <img onclick="image_preview('<?php echo 'assets/img/project-image/project_image_'.$row->id.'.jpg'?>')" class="shadow" src="<?php echo base_url('assets/img/project-image/project_image_'.$row->id.'.jpg') ?>"  alt="Icon" style="width:50%;max-width:100px"/> </td>                                                           
+                                    <td>  <img onclick="image_preview('<?php echo 'assets/img/project-image/'.$row->image_address ?>')" class="shadow" src="<?php echo base_url('assets/img/project-image/'.$row->image_address) ?>"  alt="Icon" style="width:50%;max-width:100px"/> </td>                                                           
                                     <td style="display: flex;font-size:22px">
                                         <a class="ml-3 text-danger" href="delete-project/<?php echo  $row->id ?>" data-toggle="tooltip" data-placement="top" title="delete"><i class="fa  fa-trash" aria-hidden="true"></i></a>
                                         <a class="ml-3 text-success" href="add-project/<?php echo  $row->id ?>" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa  fa-edit" aria-hidden="true"></i></a>

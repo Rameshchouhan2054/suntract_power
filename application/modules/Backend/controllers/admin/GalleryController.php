@@ -17,7 +17,7 @@ class GalleryController extends My_Controller
 
     public function gallery_image_list()
     {
-        // $dataArray['table_data'] = $this->Gallerys->gallery_image_list();
+        $dataArray['table_data'] = $this->Gallerys->gallery_image_list();
         $dataArray['table_heading'] = "Galllery list";
         $dataArray['new_entry_link'] = "gallery-image-form";
         $dataArray['new_entry_caption'] = "Add Gallery Image";
@@ -28,24 +28,32 @@ class GalleryController extends My_Controller
     public function addGalleryImage($id = null)
     {     
         $dataArray = array();
-        $this->form_validation->set_rules('for_form_vaidation', 'Client name ', 'required');
+      
+        $this->form_validation->set_rules('photo_category', 'Photo Category ', 'required');
+        $this->form_validation->set_rules('photo_desc', 'Photo description ', 'required');
         if ($this->form_validation->run() == false) {
             $dataArray['form_caption'] = "Add Gallery Image";
             $dataArray['form_action'] = current_url();
             $dataArray['form_card_heading'] = 'Gallery form';
-            $dataArray['back_button'] = 'gallery-image-list';
+            $dataArray['back_btn'] = 'gallery-image-list';
 
             if (!empty($id)) {
                 $row = $this->Gallerys->get_galleryImage_by_id($id);
                 $dataArray['form_caption'] = 'Edit Gallery image';
                 $dataArray['id'] = $row->id;
-                $dataArray['gallery_image_address'] = $row->gallery_image_address;                              
+                $dataArray['photo_desc'] = $row->photo_desc;     
+                $dataArray['photo_category'] = $row->photo_category;             
+                $dataArray['image_address'] = $row->image_address;                    
             }
        
             $this->load->view('admin/gallery-image-form', $dataArray);           
         } else {
 
-            $id = trim($this->input->post('id'));        
+            $id = trim($this->input->post('id'));     
+            $dataValues =array(
+                'photo_category'=>trim($this->input->post('photo_category')),
+                'photo_desc'=>trim($this->input->post('photo_desc'))
+            )   ;
             if (empty($id)) {
                 $dataValues['created_by'] = $this->session->admin->id;
                 $dataValues['created_at'] = date('d-m-Y h:i:s a');                           
@@ -54,42 +62,51 @@ class GalleryController extends My_Controller
                 $dataValues['updated_by'] = $this->session->admin->id;
                 $dataValues['updated_at'] = date('d-m-Y h:i:s a');   
             }
-            $response = json_decode($this->Sliders->save_sliderImage($dataValues));
+            $response = json_decode($this->Gallerys->save_galleryImage($dataValues));
             
-            if (!empty($_FILES['slider_image']['name'])) {
+            if (!empty($_FILES['gallery_image']['name'])) {
                
-                $file_name = 'slider_image_' . $response->id;
-                $path = './assets/image/slider-image/'.$file_name.'.jpg';
-                // var_dump(file_exists($path));
-                // p($path);
+                $file_name = 'gallery_image_' . $response->id;
+                $path = './assets/img/gallery/'.$file_name.'.jpg';
                 if(file_exists($path))
-                {
-                    p("hii");
+                {                    
                     unlink($path);
                 }
-                $dataValues['slider_image_address'] = $file_name;
-                $config['upload_path'] = './assets/image/slider-image';
+                
+                $config['upload_path'] = './assets/img/gallery';
                 $config['allowed_types'] = 'jpeg|png|jpg';
                 $config['max_size'] = 16000;
                 $config['file_name'] = $file_name;
                 $this->load->library('upload', $config);
 
-                if (!$this->upload->do_upload('slider_image')) {
+                if (!$this->upload->do_upload('gallery_image')) {
                     $error = array('error' => $this->upload->display_errors());
-                   p($error);
-                $this->session->set_flashdata('operation_msg', $error);
+              
+                $this->session->set_flashdata('operation_msg', $error['error']);
                 $this->session->set_flashdata('operation_msg_type', 'danger');
-                redirect('slider-image-form');
+                redirect('gallery-image-form');
                 }
+                
+                $uploaded_filename = $this->upload->data('file_name');
+                $this->Gallerys->update_filename($response->id,$uploaded_filename);
             }
          
             if ($response->message == "inserted") {
-                $this->session->set_flashdata('operation_msg', 'Testimonial added successfully.');
+                $this->session->set_flashdata('operation_msg', 'Image added successfully.');
             } else {
-                $this->session->set_flashdata('operation_msg', 'Testimonial updated successfully.');
+                $this->session->set_flashdata('operation_msg', 'image updated successfully.');
             }
             $this->session->set_flashdata('operation_msg_type', 'success');
             redirect('gallery-image-list');
         }
     }    
+
+    public function delete_image($id)
+    {
+        $this->Gallerys->delete_image($id);
+        $this->session->set_flashdata('operation_msg', 'Image deleted successfully.');
+    
+        $this->session->set_flashdata('operation_msg_type', 'success');
+        redirect('gallery-image-list');
+    }
 }

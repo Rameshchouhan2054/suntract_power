@@ -341,7 +341,7 @@
                                                         <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
                                                             <div class="inner-box">
                                                                 <div class="image-box">
-                                                                    <div class="image"><a href="javascript:void(0)"><img src="<?php echo base_url('assets/img/team/team_member_'.$row->id.".jpg") ?>" alt="" style="max-height: 258px;"></a></div>                                                                
+                                                                    <div class="image"><a href="javascript:void(0)"><img src="<?php echo base_url('assets/img/team/'.$row->image_address) ?>" alt="" style="max-height: 258px;"></a></div>                                                                
                                                                 </div>
                                                                 <div class="lower-box">
                                                                     <h3><?php echo $row->member_name ?></h3>

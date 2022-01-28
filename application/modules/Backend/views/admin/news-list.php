@@ -8,6 +8,13 @@
     }
 }
 </style>
+<div class="modal fade modal-md" id="image_preview" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <img id="selected_image" src="" alt="Icon">
+            </div>
+        </div>
+    </div>
 <div class="content-wrapper" style="margin-top:60px">
     <div class="content-header">
         <div class="container-fluid">
@@ -46,7 +53,6 @@
                     }
                     ?>
                 </div>
-
             </div>
         </div>
     </div>
@@ -58,9 +64,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">Serial No.</th>
-                                <th scope="col">Member Name</th>
-                                <th scope="col">Member Position</th>
-                                <th scope="col">Member image</th>                              
+                                <th scope="col">News Title</th>
+                                <th scope="col">News Description</th> 
+                                <th scope="col">Uploaded image</th>                                                                                             
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -74,18 +80,17 @@
                             ?>
                             <tr>
                                 <td><?php echo  $counter ?></td>
-                                <td><?php echo  $row->member_name ?></td>
-                            
-                                <td><?php echo  $row->member_position ?></td>                                
-                                <td><img src ="<?php echo base_url('assets/img/team/'.$row->image_address) ?>" style="width:80px"></td>
+                                <td><?php echo  $row->news_title ?></td>
+                                <td><?php echo  $row->news_desc ?></td> 
+                                <td>  <img onclick="image_preview('<?php echo 'assets/img/news/'.$row->image_address  ?>')" class="shadow" src="<?php echo base_url('assets/img/news/'.$row->image_address) ?>"  alt="Icon" style="width:50%;max-width:100px"/> </td>                                                                                                                     
                                 <td style="display: flex; font-size:20px">
                                     <a class="ml-3" style="color:red"
-                                        onclick="return confirm('Are you sure you want delete member of <?php echo $row->member_name ?>')"
-                                        href="delete-team-member/<?php echo  $row->id ?>" data-toggle="tooltip"
+                                        onclick="return confirm('Are you sure you want delete  image')"
+                                        href="delete-news/<?php echo  $row->id ?>" data-toggle="tooltip"
                                         data-placement="top" title="Delete"> <i class="fa fa-trash"
                                             aria-hidden="true"></i></a>
-                                    <!-- <a class="ml-3" href="view-testimonialphp echo  $row->id ?>" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye" aria-hidden="true"></i></a> -->
-                                    <a class="ml-3 text-success" href="team-member-form/<?php echo  $row->id ?>"
+                                    <!-- <a class="ml-3" href="view-user/<?php echo  $row->id ?>" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye" aria-hidden="true"></i></a> -->
+                                    <a class="ml-3 text-success" href="news-form/<?php echo  $row->id ?>"
                                         data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa  fa-edit"
                                             aria-hidden="true"></i></a>
                                 </td>
@@ -109,4 +114,12 @@ $("document").ready(function() {
     });
     $('[data-toggle="tooltip"]').tooltip()
 })
+
+function image_preview(image_name)
+{
+    console.log(image_name);
+    var file = base_url+image_name
+    $("#selected_image").attr('src',file);
+    $("#image_preview").modal("show");
+}
 </script>

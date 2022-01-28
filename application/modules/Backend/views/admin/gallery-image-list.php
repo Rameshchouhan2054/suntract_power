@@ -8,6 +8,13 @@
     }
 }
 </style>
+<div class="modal fade modal-md" id="image_preview" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <img id="selected_image" src="" alt="Icon">
+            </div>
+        </div>
+    </div>
 <div class="content-wrapper" style="margin-top:60px">
     <div class="content-header">
         <div class="container-fluid">
@@ -57,8 +64,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">Serial No.</th>
-                                <th scope="col">Slider image name</th>
-                                <th scope="col">Slider image preview</th>                                                             
+                                <th scope="col">Image Category</th>
+                                <th scope="col">Image Description</th> 
+                                <th scope="col">Uploaded image</th>                                                                                             
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -72,16 +80,17 @@
                             ?>
                             <tr>
                                 <td><?php echo  $counter ?></td>
-                                <td><?php echo  $row->slider_image_address ?></td>
-                                <td><?php echo  "image preview" ?></td>                                                           
+                                <td><?php echo  $row->photo_category ?></td>
+                                <td><?php echo  $row->photo_desc ?></td> 
+                                <td>  <img onclick="image_preview('<?php echo 'assets/img/gallery/'.$row->image_address?>')" class="shadow" src="<?php echo base_url('assets/img/gallery/'.$row->image_address) ?>"  alt="Icon" style="width:50%;max-width:100px"/> </td>                                                                                                                     
                                 <td style="display: flex; font-size:20px">
                                     <a class="ml-3" style="color:red"
-                                        onclick="return confirm('Are you sure you want delete slider image  <?php echo $row->id ?>')"
-                                        href="delete-slider-image/<?php echo  $row->id ?>" data-toggle="tooltip"
+                                        onclick="return confirm('Are you sure you want delete  image')"
+                                        href="delete-gallery-image/<?php echo  $row->id ?>" data-toggle="tooltip"
                                         data-placement="top" title="Delete"> <i class="fa fa-trash"
                                             aria-hidden="true"></i></a>
                                     <!-- <a class="ml-3" href="view-user/<?php echo  $row->id ?>" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye" aria-hidden="true"></i></a> -->
-                                    <a class="ml-3 text-success" href="slider-image-form/<?php echo  $row->id ?>"
+                                    <a class="ml-3 text-success" href="gallery-image-form/<?php echo  $row->id ?>"
                                         data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa  fa-edit"
                                             aria-hidden="true"></i></a>
                                 </td>
@@ -105,4 +114,12 @@ $("document").ready(function() {
     });
     $('[data-toggle="tooltip"]').tooltip()
 })
+
+function image_preview(image_name)
+{
+    console.log(image_name);
+    var file = base_url+image_name
+    $("#selected_image").attr('src',file);
+    $("#image_preview").modal("show");
+}
 </script>

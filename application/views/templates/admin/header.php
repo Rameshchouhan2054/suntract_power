@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Suntract_power</title>
-
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-free/css/all.min.css') ?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') ?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/adminlte.min.css') ?>">
-  <link rel="shortcut icon" href="#">
+  
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -22,18 +22,18 @@
   </div> -->
 
     <!-- Navbar -->
-    <nav class="main-header navbar headerfix navbar-expand fixed-top" style="background-color: rgb(57 62 70); ">
+    <nav class="main-header navbar headerfix navbar-expand fixed-top " style="background-color: rgb(57 62 70); ">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars" style="color: aliceblue;"></i></a>
-        </li>
+        </li> -->
         <li class="nav-item d-none d-sm-inline-block">
           <a href="admin" class="nav-link" style="color: aliceblue;">Home</a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
+        <!-- <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link" style="color: aliceblue;">Contact</a>
-        </li>
+        </li> -->
       </ul>
 
       <!-- Right navbar links -->
@@ -70,8 +70,7 @@
           </a>
         </li>
         <li class="nav-item pt-1 pr-2">
-          <a href="<?php
-                    echo  base_url(); ?>logout" class="" style="color: ghostwhite; font-size: 21px;">Logout</a>
+          <a href="<?php echo  base_url(); ?>logout" class="" style="color: ghostwhite; font-size: 21px;">Logout</a>
         </li>
       </ul>
 
@@ -133,12 +132,12 @@
                     <p>Testimonial</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="<?php echo base_url('slider-image-list') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Slider</p>
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a href="<?php echo base_url('unsettled-query-list') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
@@ -152,9 +151,9 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url('Notification-list') ?>" class="nav-link">
+                  <a href="<?php echo base_url('news-list') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Notifications</p>
+                    <p>News</p>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -200,8 +199,9 @@
     <script src="<?php echo base_url('assets/plugins/jquery-ui/jquery-ui.min.js') ?>"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-      var base_url ="<?php echo base_url() ?>";
+      // var base_url ="<?php echo base_url() ?>";
       $.widget.bridge('uibutton', $.ui.button)
+
     </script>
     <!-- Bootstrap 4 -->
     <script src="<?php echo base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>

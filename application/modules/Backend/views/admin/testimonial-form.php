@@ -71,7 +71,7 @@ if (!empty($id)) {
                         <div class="card card-outline-secondary">
                             <div class="card-header d-flex">
                                 <h3 class="mb-0"><?php echo empty($form_caption) ? "" : $form_caption; ?> </h3>
-                                <a class="btn btn-secondary mr-3" href="<?php echo base_url('backend-user-list') ?>" style="position:absolute;right:0">Back </a>
+                                <a class="btn btn-secondary mr-3" href="<?php echo base_url('testimonial-list') ?>" style="position:absolute;right:0">Back </a>
                             </div>
                             <div class="card-body">
                                 <?php

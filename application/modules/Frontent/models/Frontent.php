@@ -24,6 +24,12 @@ class Frontent extends CI_Model
         $this->db->order_by("id", "DESC");
         return $this->db->get('testimonial')->result();
     }
+    public function get_news_data()
+    {
+        
+        $this->db->order_by("id", "DESC");
+        return $this->db->get('news')->result();
+    }
 
     public function get_member_data()
     {        
@@ -31,6 +37,11 @@ class Frontent extends CI_Model
         return $this->db->get('team_members')->result();
     }
 
+    public function get_gallery_data()
+    {        
+        // $this->db->order_by("id", "DESC");
+        return $this->db->get('gallery')->result();
+    }
     public function get_slider_data()
     {        
         $this->db->order_by("id", "DESC");

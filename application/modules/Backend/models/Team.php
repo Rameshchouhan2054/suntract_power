@@ -47,6 +47,11 @@ class Team extends My_Model
     $this->db->delete('team_members');
   }
 
+  public function update_filename($id,$uploaded_filename)
+  {
+    $this->db->where('id',$id);
+    $this->db->update('team_members',array('image_address'=>$uploaded_filename));
+  }
 
   //--------------------------statistics---------------------------------
   public function get_statistics_data()

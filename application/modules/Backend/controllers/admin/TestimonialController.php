@@ -38,7 +38,8 @@ class TestimonialController extends My_Controller
                 $dataArray['id'] = $row->id;
                 $dataArray['client_name'] = $row->client_name;
                 $dataArray['client_city'] = $row->client_city;
-                $dataArray['client_review'] = $row->client_review;               
+                $dataArray['client_review'] = $row->client_review;  
+                // $dataArray['image_address'] = $row->image_address;               
             }
 
       
@@ -85,6 +86,10 @@ class TestimonialController extends My_Controller
                 $this->session->set_flashdata('operation_msg_type', 'danger');
                 redirect('testimonial-form');
                 }
+
+                
+                // $uploaded_filename = $this->upload->data('file_name');
+                // $this->Testimonials->update_filename($response->id,$uploaded_filename);
             }
          
             if ($response->message == "inserted") {

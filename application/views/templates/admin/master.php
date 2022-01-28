@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- App favicon -->
-    <link href="<?php echo base_url('assets/img/logo/favicon.png'); ?>" rel="icon">
+    <link href="<?php echo base_url('assets/img/logo/logo.png'); ?>" rel="icon">
 
     <?php echo $template_css; ?>
     <!-- <script type="text/javascript" charset="UTF-8" src=<?php echo base_url(); ?>assets/js/vendor.min.js?1554960401"></script> -->

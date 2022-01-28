@@ -27,7 +27,7 @@ if (!empty($id)) {
     <div class="modal fade" id="client_image_preview" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <img id="myImg" src="<?php echo base_url('assets/img/team/team_member_') . $id . '.jpg' ?>" alt="Icon">
+                <img id="myImg" src="<?php echo base_url('assets/img/team/') . $image_address  ?>" alt="Icon">
             </div>
         </div>
     </div>
@@ -130,7 +130,7 @@ if (!empty($id)) {
                                     <div class="row">
                                         <div class="form-group col-md-12 border p-3">
                                             <label class="col-md-5 ">Uploaded Image:</label>
-                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/team/team_member_' . $id . '.jpg') ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
+                                            <img id="upload_preview" class="shadow" src="<?php echo base_url('assets/img/team/' . $image_address ) ?>" data-toggle="modal" data-target="#client_image_preview" alt="Icon" style="width:50%;max-width:100px" />
                                         </div>
                                     </div>
                                 <?php

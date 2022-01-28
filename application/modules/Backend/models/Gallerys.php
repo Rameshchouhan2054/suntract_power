@@ -7,7 +7,7 @@ class Gallerys extends My_Model
     parent::__construct();
   }
   
-  public function gallery_list()
+  public function gallery_image_list()
   {    
     return $this->db->get('gallery')->result();    
   }
@@ -41,5 +41,16 @@ class Gallerys extends My_Model
     return json_encode($return);
   }
 
+  public function delete_image($id)
+  {
+    $this->db->where('id',$id);
+    $this->db->delete('gallery');
+  }
+
+  public function update_filename($id,$uploaded_filename)
+  {
+    $this->db->where('id',$id);
+    $this->db->update('gallery',array('image_address'=>$uploaded_filename));
+  }
 }
 

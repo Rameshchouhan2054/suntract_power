@@ -29,7 +29,7 @@ class ProjectsController extends My_Controller
             $dataArray['form_caption'] = "Add Project";
             $dataArray['form_action'] = current_url();
             $dataArray['form_card_heading'] = 'Project form';
-            $dataArray['back_button'] = 'projects';
+            $dataArray['back_btn'] = 'Projects';
 
             if (!empty($id)) {
                 $row = $this->Projects->get_project_by_id($id);
@@ -37,6 +37,7 @@ class ProjectsController extends My_Controller
                 $dataArray['id'] = $row->id;
                 $dataArray['project_name'] = $row->project_name;
                 $dataArray['description'] = $row->description;
+                $dataArray['image_address'] = $row->image_address;
             }
 
             $this->load->view('admin/project-form', $dataArray);
@@ -82,6 +83,9 @@ class ProjectsController extends My_Controller
                 $this->session->set_flashdata('operation_msg_type', 'danger');
                 redirect('add-project');
                 }
+
+                $uploaded_filename = $this->upload->data('file_name');
+                $this->Projects->update_filename($response->id,$uploaded_filename);
             }
          
 

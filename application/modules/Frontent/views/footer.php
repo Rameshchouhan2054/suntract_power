@@ -1,77 +1,16 @@
-<div data-elementor-type="page" data-elementor-id="351" class="elementor elementor-351" data-elementor-settings="[]">
-            <!-- <div class="elementor-inner">
-                <div class="elementor-section-wrap">
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-9d701f3 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9d701f3" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-09c04ac" data-id="09c04ac" data-element_type="column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-4f0f27b elementor-widget elementor-widget-brand_info_area__o" data-id="4f0f27b" data-element_type="widget" data-widget_type="brand_info_area__o.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="main-footer footer-style-one">
-                                                        <div class="upper-section">
-                                                            <div class="auto-container">
-                                                                <div class="outer clearfix">
-                                                                    <div class="service-block-two">
-                                                                        <div class="inner-box">
-                                                                            <div class="icon-box"><i aria-hidden="true" class=" flaticon-renewable-energy"></i></div>
-                                                                            <div class="service-title"><a href="#">Energy Efficiency Solutions</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="service-block-two">
-                                                                        <div class="inner-box">
-                                                                            <div class="icon-box"><i aria-hidden="true" class=" flaticon-power-7"></i></div>
-                                                                            <div class="service-title"><a href="#">Solar panel Commissioning</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="service-block-two logo-block">
-                                                                        <div class="inner-box">
-                                                                            <div class="logo">
-                                                                                <a href="<?php echo base_url() ?>" class=""><img src="<?php echo base_url(); ?>assets/img/logo/logo.png" alt=""></a>
-                                                                            </div>
-                                                                            <div class="social-links">
-                                                                                <ul class="clearfix">
-                                                                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                                                                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                                                                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                                                                                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                                                                    <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="service-block-two">
-                                                                        <div class="inner-box">
-                                                                            <div class="icon-box"><i aria-hidden="true" class=" flaticon-car-battery"></i></div>
-                                                                            <div class="service-title"><a href="#">Battery backup <br>Generator</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="service-block-two">
-                                                                        <div class="inner-box">
-                                                                            <div class="icon-box"><i aria-hidden="true" class=" flaticon-solar-energy-2"></i></div>
-                                                                            <div class="service-title"><a href="#">Whole House Surge Protection</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div> -->
+<style>
+    @media screen {
+        .footer_set{
+            padding: 20px;
+        }
+    }
+    </style>
+<div  data-elementor-type="page" data-elementor-id="351" class="elementor elementor-351" data-elementor-settings="[]">
+           
         <div data-elementor-type="page" data-elementor-id="360" class="elementor elementor-360" data-elementor-settings="[]">
-            <div class="elementor-inner">
-                <div class="elementor-section-wrap">
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-0ce2313 main-footer elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0ce2313" data-element_type="section">
+            <div class="elementor-inner ">
+                <div class="elementor-section-wrap ">
+                    <section class="footer_set elementor-section elementor-top-section elementor-element elementor-element-0ce2313 main-footer elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0ce2313" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e00fc10 widgets-section" data-id="e00fc10" data-element_type="column">
@@ -136,27 +75,27 @@
                                                             <div class="widget-content">
                                                                 <ul>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            About Strnix </a>
+                                                                        <a href="<?php echo base_url('about-us') ?>"  rel=nofollow>
+                                                                            About Suntract Power </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            News Blog </a>
+                                                                        <a href="<?php echo base_url('contact-us') ?>"  rel=nofollow>
+                                                                            Contact Us </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            Careers </a>
+                                                                        <a href="#services"  rel=nofollow>
+                                                                            Services </a>
                                                                     </li>
-                                                                    <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
+                                                                    <!-- <li>
+                                                                        <a href="#"  rel=nofollow>
                                                                             Case Studies </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
+                                                                        <a href="#"  rel=nofollow>
                                                                             Meet Our Team </a>
-                                                                    </li>
+                                                                    </li> -->
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
+                                                                        <a href="#testimonial"  rel=nofollow>
                                                                             Testimonials </a>
                                                                     </li>
                                                                 </ul>
@@ -181,25 +120,21 @@
                                                             <div class="widget-content">
                                                                 <ul>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            Installation &amp; Monitoring </a>
+                                                                        <a href="<?php echo base_url('services/s1') ?>"  rel=nofollow>
+                                                                        Project development </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            After Sales Service </a>
+                                                                        <a href="<?php echo base_url('services/s2') ?>"  rel=nofollow>
+                                                                        EPC (Engineering Procurement & Construction) </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            Free Replacemrnt </a>
+                                                                        <a href="<?php echo base_url('services/s3') ?>"  rel=nofollow>
+                                                                        Project Management, Engineering & Design Consultancy </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            Warrenty Claims </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#" target=_blank rel=nofollow>
-                                                                            Energy Equipments </a>
-                                                                    </li>
+                                                                        <a href="<?php echo base_url('services/s4') ?>"  rel=nofollow>
+                                                                        Operation and Maintenance </a>
+                                                                    </li>                                                                  
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -258,7 +193,7 @@
                 </div>
             </div>
         </div>
-        <footer class="main-footer 1">
+        <footer class="main-footer 1 footer_set">
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner clearfix">

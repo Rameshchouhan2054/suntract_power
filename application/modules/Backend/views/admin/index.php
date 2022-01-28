@@ -54,18 +54,7 @@
           </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-6">
-          <!-- small box -->
-          <div class="small-box bg-success">
-            <div class="inner">
-              <p>Slider</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="<?php echo base_url('slider-list') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>                   
+                    
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-info">
@@ -87,19 +76,55 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url('gallery-list') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url('gallery-image-list') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <p>Notifications</p>
+              <p>News</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="<?php echo base_url('notification-list') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url('news-list') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-primary">
+            <div class="inner">
+              <p>Team</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="<?php echo base_url('team-member-list') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <p>Statistics</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="<?php echo base_url('statistics') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-primary">
+            <div class="inner">
+              <p>Projects</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="<?php echo base_url('Projects') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
       </div>  
