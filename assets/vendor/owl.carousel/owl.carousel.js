@@ -3151,7 +3151,7 @@
             settings = this._core.settings,
             size = settings.center || settings.autoWidth || settings.dotsData ?
             1 : settings.dotsEach || settings.items;
-
+console.log("hii");
         if (settings.slideBy !== 'page') {
             settings.slideBy = Math.min(settings.slideBy, settings.items);
         }

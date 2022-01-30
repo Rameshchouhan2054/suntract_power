@@ -43,7 +43,7 @@
                                                                     <p><b>SunTrack</b> is providing smart solar energy solutions and devoted to meet customer needs. Our knowledge, experience, and continual innovation have led to highly successful in solar system installations and turnkey solution. By integrating research and development, manufacturing, and commercial expertise across the entire solar value chain, Suntrack provides industry-leading solar energy solutions that not only include components manufacturing, but also package services throughout the entire life cycle of solar power plants, from project design, financing, engineering, procurement, and construction management through operations and maintenance services. </p>
                                                                     <p><b>With</b> a proven track record of 6 years in the photovoltaic industry, SunTrack has positioned itself as a pioneer in providing reliable, effective, and sustainable smart solar solutions.</p>
                                                                 </div>
-                                                                <div class="signature">owner name </div>
+                                                                <div class="signature">Mohit Panwar </div>
                                                             </div>
                                                         </div>
                                                     </div>                                        

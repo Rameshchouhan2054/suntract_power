@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Suntract_power</title>
+  <title>Suntrack Power</title>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-free/css/all.min.css') ?>">
@@ -25,9 +25,9 @@
     <nav class="main-header navbar headerfix navbar-expand fixed-top " style="background-color: rgb(57 62 70); ">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars" style="color: aliceblue;"></i></a>
-        </li> -->
+        </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="admin" class="nav-link" style="color: aliceblue;">Home</a>
         </li>

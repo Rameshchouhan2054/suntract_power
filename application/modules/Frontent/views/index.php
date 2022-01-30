@@ -204,7 +204,7 @@
                                                                                     <span class="dot"></span>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="program-carousel strnix-carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 500, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "2" }, "1024":{ "items" : "3" }, "1200":{ "items" : "4" }}}'>
+                                                                            <div class="program-carousel strnix-carousel owl-theme owl-carousel" data-options='{"loop": false, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 500, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "2" }, "1024":{ "items" : "3" }, "1200":{ "items" : "4" }}}'>
                                                                                 <?php
                                                                                 foreach ($projects_data as $row) {
                                                                                 ?>
@@ -729,7 +729,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="reviews-carousel-box">
-                                                                                    <div class="reviews-carousel strnix-carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 40, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 500, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "1" }, "1024":{ "items" : "2" }, "1200":{ "items" : "2" }}}'>
+                                                                                    <div class="reviews-carousel strnix-carousel owl-theme owl-carousel" data-options='{"loop": false, "margin": 40, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 500, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "1" }, "1024":{ "items" : "2" }, "1200":{ "items" : "2" }}}'>
                                                                                         <?php
                                                                                         foreach ($testimonial_data as $record) {
                                                                                         ?>
@@ -763,7 +763,7 @@
                                                                     <div class="sponsors-outer">
                                                                         <div class="auto-container">
 
-                                                                            <div class="sponsors-carousel strnix-carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 40, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "3" } , "800":{ "items" : "3" }, "1024":{ "items" : "4" }, "1200":{ "items" : "5" }}}'>
+                                                                            <div class="sponsors-carousel strnix-carousel owl-theme owl-carousel" data-options='{"loop": false, "margin": 40, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "3" } , "800":{ "items" : "3" }, "1024":{ "items" : "4" }, "1200":{ "items" : "5" }}}'>
                                                                                 <div class="slide-item">
                                                                                     <figure class="image-box"><a href="JavaScript:void(0);"><img src="#" alt=""></a></figure>
                                                                                 </div>
